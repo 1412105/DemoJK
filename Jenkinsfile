@@ -21,7 +21,7 @@ pipeline {
   		stage('Deploy') {
   			steps {
   				echo 'Create .jar file..'
-  				bat 'jar -cef HelloWorld HW.jar jk/*.class'
+  				bat 'jar -cef jk.HelloWorld HW.jar jk/*.class'
           bat 'java -jar HW.jar'
   			}
   		}
